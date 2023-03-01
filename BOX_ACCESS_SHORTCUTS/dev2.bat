@@ -1,0 +1,1 @@
+start rdp.exe /v:ty-siebl20-hi-x.njes.state.nj.us /u:ty-siebl20-hi-x.njes.state.nj.us\sadmin /p:Siebdev99

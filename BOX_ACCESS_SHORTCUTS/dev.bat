@@ -1,0 +1,1 @@
+start rdp.exe /f /v:10.26.99.55 /u:10.26.99.55\vdikert /p:SiebelAdmin12!

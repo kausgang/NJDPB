@@ -1,0 +1,1 @@
+start rdp.exe /v:10.243.2.6 /u:10.243.2.6\sadmin /p:Siebdev99

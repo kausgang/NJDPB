@@ -1,0 +1,1 @@
+start rdp.exe /f /v:snja65.pa.state.nj.us /u:snja65.pa.state.nj.us\sadmin /p:SiebUAT_12

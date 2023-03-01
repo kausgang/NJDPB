@@ -1,0 +1,23 @@
+#load the profile where aliases are defined
+. ~/.profile
+
+#start gateway
+gtwy
+start_ns
+
+sleep 10
+
+#start tomcat server for internal connections
+ses_start
+
+sleep 10
+
+#start the siebel server
+siebenv
+start_server all
+
+sleep 10
+
+#start the tomcat server for external connections
+ai_start
+

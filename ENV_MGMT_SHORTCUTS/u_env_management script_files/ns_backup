@@ -1,0 +1,9 @@
+echo "Taking backup of /siebqa1/SIEBEL/gtwysrvr/registry/conf/version-2"
+
+#a=`date +"%d-%b-%Y_%H-%M"`
+
+echo "ENTER BACKUP NAME"
+read a
+
+scp -r /siebqa1/SIEBEL/gtwysrvr/registry/conf/version-2  /siebqa1/SIEBEL/gtwysrvr/registry/conf/version-2_${a}
+

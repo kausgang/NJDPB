@@ -1,0 +1,1 @@
+start /MAX putty sadmin@172.31.76.51 -pw siebdev99

@@ -1,0 +1,18 @@
+#load the profile where aliases are defined
+. ~/.profile
+
+#stop the tomcat server for external connections
+ai_stop
+
+#stop the siebel server
+siebenv
+stop_server all
+
+#stop tomcat server for internal connections
+ses_stop
+
+
+#stop gateway
+gtwy
+stop_ns
+

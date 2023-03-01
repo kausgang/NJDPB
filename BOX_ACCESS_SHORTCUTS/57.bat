@@ -1,0 +1,1 @@
+start rdp.exe /v:snja57.sa.state.nj.us /u:snja58.sa.state.nj.us\sadmin /p:Siebtest0!

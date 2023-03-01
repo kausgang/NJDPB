@@ -1,0 +1,1 @@
+start rdp.exe /max /v:ty-siebl01-h1-e.pa.state.nj.us /u:ty-siebl01-h1-e.pa.state.nj.us\sadmin /p:SiebUAT_12

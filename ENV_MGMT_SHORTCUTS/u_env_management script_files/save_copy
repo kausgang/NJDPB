@@ -1,0 +1,3 @@
+a=`date +"%d-%b-%Y_%H-%M"`
+scp -r `pwd`/$1	`pwd`/$1_${a}
+
