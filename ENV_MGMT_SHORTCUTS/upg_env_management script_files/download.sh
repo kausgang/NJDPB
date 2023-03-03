@@ -13,7 +13,7 @@
 # This scrip automates steps 1-5
 
 # !/usr/bin/ksh
-DIR=/home/typgang/DOWNLOADs
+DIR=/home/typgang/DOWNLOAD
 
 if [ -s "$DIR" ]; then
     # even if folder exists, chamge mode to 777
