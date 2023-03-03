@@ -17,7 +17,7 @@ DIR=/home/typgang/DOWNLOAD
 
 if [ -s "$DIR" ]; then
     # even if folder exists, chamge mode to 777
-    echo "Make sure that DOWNLOAD folder has 777 permission"
+
     if [ $# -eq 0 ]; then
         echo "Provide the file to download"
         exit 1
