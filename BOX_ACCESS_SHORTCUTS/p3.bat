@@ -1,1 +1,1 @@
-start /MAX putty typgang@ty-sebtst6-ma-s.njes.state.nj.us  -pw siebdev99 -X
+start /MAX putty typgang@ty-sebtst6-ma-s.njes.state.nj.us  -pw Siebdev99 -X
