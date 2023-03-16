@@ -1,0 +1,1 @@
+java -jar commsrvr_restart.jar A

@@ -1,0 +1,1 @@
+java -cp commsrvr.jar commsrvr.csm

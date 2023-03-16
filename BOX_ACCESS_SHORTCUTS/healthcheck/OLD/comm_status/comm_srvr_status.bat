@@ -1,0 +1,1 @@
+java -jar commsrvr_status.jar status

@@ -1,0 +1,1 @@
+java -jar comm_doc_status.jar 1.a

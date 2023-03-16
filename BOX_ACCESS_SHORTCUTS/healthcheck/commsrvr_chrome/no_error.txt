@@ -1,0 +1,1 @@
+/home/sadmin/SCRIPT/mail_for_CTI/no_error.sh
