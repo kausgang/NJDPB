@@ -20,8 +20,8 @@ box6=ty-siebweb-ha-s.njes.state.nj.us
 rundate=$(date +"%d-%b-%Y")
 
 # CHANGE THIS
-main_cert_path=/home/typgang/CA_CERTIFICATE
-digicert_cert_path=/home/typgang/CA_CERTIFICATE/CA_CERTS
+main_cert_path=/home/sadmin/CA_CERTIFICATE
+digicert_cert_path=/home/sadmin/CA_CERTIFICATE/CA_CERTS
 
 # import certificates with proper alias names from the certificate location into keystore
 # ------------------------------------------------------------------------------------------
