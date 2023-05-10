@@ -1,0 +1,1 @@
+start /MAX putty sadmin@ty-siebol2-ma-x.NJES.STATE.NJ.US  -pw siebdev99

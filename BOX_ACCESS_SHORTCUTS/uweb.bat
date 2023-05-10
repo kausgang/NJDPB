@@ -1,1 +1,1 @@
-start /MAX putty sadmin@ty-siebol2-ma-x.NJES.STATE.NJ.US  -pw siebdev99
+start /MAX putty sadmin@ty-siebol2-ma-x.NJES.STATE.NJ.US  -i "C:\Users\6J5260897\Documents\GITHUB\NJDPB\BOX_ACCESS_SHORTCUTS\private.ppk"
