@@ -1,1 +1,1 @@
-start /MAX putty typgang@ty-sebtst3-ma-s.njes.state.nj.us  -i "C:\Users\6J5260897\Documents\GITHUB\NJDPB\BOX_ACCESS_SHORTCUTS\private.ppk"
+start /MAX putty typgang@ty-sebtst3-ma-s.njes.state.nj.us  -i "C:\INSTALLED\private.ppk"
