@@ -1,43 +1,48 @@
 @ECHO OFF
 
 @REM Remove local temp folder if exists
-@REM !!!!!!!!!!!!!!!!!!!!!!!! UPDATE THIS
-rd /s /q c:\disa_temp
+@REM rd /s /q c:\disa_temp
 
 @REM go to installation location
-pushd \\tretvsccmpri01\Software Repository\Pensions\DISA\DISA_23
+pushd "\\tretvsccmpri01\Software Repository\Pensions\DISA\"
 
 @REM copy installer to local
-@REM !!!!!!!!!!!!!!!!!!!!!!!! UPDATE THIS
 md c:\disa_temp
 xcopy /e /k /h /i .\DISA c:\disa_temp\
-pause
 
 @REM go to disa_temp and uninsall
 c:
 cd c:\disa_temp
-taskkill /f /im disa.exe
-.\jre\bin\java -cp C:\DISA\Uninstall\uninstaller.jar uninstall -i silent
+taskkill /f /im javaw.exe
+start /B .\jre\bin\java -cp C:\DISA\Uninstall\uninstaller.jar uninstall -i silent
 
-@REM !!!!!!!! UPDATE IF NECESSARY !!!!!
+
 @REM wait for un-installation to finish
-timeout 120
+timeout 60
+
+@REM kill uninstall process
+taskkill /f /im java.exe
+
 
 
 @REM Remove c:\disa
-rd /s /q c:\disa 
+rd /s /q c:\DISA
+@REM remove disa_gradle
+rd /s /q C:\Disa_gradle
+@REM remove "Zero G Registry" folder from C:\Program Files and C:\program files(86)
+rd /s /q "C:\Program Files\Zero G Registry"
+rd /s /q "C:\Program Files (x86)\Zero G Registry"
+
+
+
 
 @REM Install DISA
-Desktop_Integration_Siebel_Agent.exe -i silent -f response.txt
+c:\disa_temp\Desktop_Integration_Siebel_Agent.exe -i silent -f c:\disa_temp\response.txt
 
-@REM !!!!!!!! UPDATE IF NECESSARY !!!!!
-@REM wait for 3 min
-timeout 180
 
-@REM !!!!!!!!!!!!!!!!!!!! DELETE THIS SECTION AFTER TEST !!!!!!!!!
-@REM Prompt admin to check installation
-echo "Check C:\DISA, if installation was successful"
-pause
+@REM wait for 30 sec
+timeout 30
+
 
 @REM Install certificates
 C:
@@ -86,17 +91,15 @@ keytool.exe -import -noprompt -trustcacerts -alias ty-siebl01-h1-e_pa_state_nj_u
 keytool.exe -import -noprompt -trustcacerts -alias ty-Siebl10-h1-s -file c:\disa_temp\DISA_Certificates\ty-Siebl10-h1-s.cer -keystore "C:\DISA\jre\lib\security\cacerts" -storepass changeit
 keytool.exe -import -noprompt -trustcacerts -alias ty-siebl10-h1-s_pa_state_nj_us -file c:\disa_temp\DISA_Certificates\ty-siebl10-h1-s_pa_state_nj_us.crt -keystore "C:\DISA\jre\lib\security\cacerts" -storepass changeit
 
-
 copy c:\disa_temp\config.properties C:\DISA\DesktopIntSiebelAgent\
-pause
 
 @REM Remove temp install folder
 cd \
 rd /s /q c:\disa_temp
 
 @REM relaunch disa
-taskkill /f /im disa.exe
-timeout 5
+taskkill /f /im javaw.exe
+timeout 10
 C:\DISA\DesktopIntSiebelAgent\disa.exe
 
 pause
