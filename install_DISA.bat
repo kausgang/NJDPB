@@ -1,7 +1,7 @@
 @ECHO OFF
 
 @REM Remove local temp folder if exists
-@REM rd /s /q c:\disa_temp
+if exist c:\disa_temp rd /s /q c:\disa_temp
 
 @REM go to installation location
 pushd "\\tretvsccmpri01\Software Repository\Pensions\DISA\"
@@ -18,7 +18,8 @@ start /B .\jre\bin\java -cp C:\DISA\Uninstall\uninstaller.jar uninstall -i silen
 
 
 @REM wait for un-installation to finish
-timeout 60
+echo "Waiting for 60s"
+timeout 60 > NUL
 
 @REM kill uninstall process
 taskkill /f /im java.exe
@@ -41,7 +42,8 @@ c:\disa_temp\Desktop_Integration_Siebel_Agent.exe -i silent -f c:\disa_temp\resp
 
 
 @REM wait for 30 sec
-timeout 30
+echo "Waiting for 30s"
+timeout 30 > NUL
 
 
 @REM Install certificates
@@ -99,10 +101,12 @@ rd /s /q c:\disa_temp
 
 @REM relaunch disa
 taskkill /f /im javaw.exe
-timeout 10
+echo "Waiting for 10s"
+timeout 10 > NUL
 C:\DISA\DesktopIntSiebelAgent\disa.exe
 
-pause
+
+
 
 
 
