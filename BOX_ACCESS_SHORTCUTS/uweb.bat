@@ -1,1 +1,1 @@
-start /MAX putty sadmin@ty-siebol2-ma-x.NJES.STATE.NJ.US  -i "C:\INSTALLED\private.ppk"
+start /MAX putty sadmin@10.245.157.73  -i "C:\INSTALLED\private.ppk"
