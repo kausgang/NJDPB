@@ -1,0 +1,17 @@
+wsl --install -d ubuntu
+
+apt-get update
+sudo apt-get install slapd ldap-utils
+sudo dpkg-reconfigure slapd
+#sudo apt-get install phpldapadmin
+#sudo service apache2 start
+sudo service slapd start
+#sudo scp /etc/phpldapadmin/config.php /etc/phpldapadmin/config.php_ORIGINAL
+#sudo vi /etc/phpldapadmin/config.php
+
+update these - 
+setValue - change to ipaddress
+change domain name
+change hide_template_warning
+
+
