@@ -1,0 +1,14 @@
+dn: uid=typgang,ou=siebel,dc=demo,dc=com
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Kaustav Ganguli
+uid: typgang
+uidNumber: 16859
+gidNumber: 100
+homeDirectory: /home/typgang
+loginShell: /bin/bash
+shadowLastChange: 0
+shadowMax: 0
+shadowWarning: 0
