@@ -1,0 +1,1 @@
+start /MAX putty typgang@ty-sblprd3-ha-e.njes.state.nj.us  -i "C:\INSTALLED\private.ppk" 
